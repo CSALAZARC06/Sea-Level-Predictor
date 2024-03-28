@@ -13,7 +13,9 @@ def draw_plot():
     fig=sns.scatterplot(data=df, x="Year", y="CSIRO Adjusted Sea Level")
 
     # Create first line of best fit
-
+    x=np.arange(df.iloc[0,0],2050+1)
+    slope,intercept, rvalue, p_value, std_err=stats.linregress(df['Year'],df['CSIRO Adjusted Sea Level'])
+    plt.plot(x,intercept + slope*(x),'r')
 
     # Create second line of best fit
 
