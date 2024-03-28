@@ -18,7 +18,10 @@ def draw_plot():
     plt.plot(x,intercept + slope*(x),'r')
 
     # Create second line of best fit
-
+    df1=df[df['Year']>=2000]
+    x1=np.arange(2000,2050+1)
+    slope1,intercept1, rvalue1, p_value1, std_err1=stats.linregress(df1['Year'],df1['CSIRO Adjusted Sea Level'])
+    plt.plot(x1,intercept1 + slope1*(x1),'g')
 
     # Add labels and title
 
