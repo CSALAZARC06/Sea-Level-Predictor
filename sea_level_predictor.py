@@ -24,7 +24,10 @@ def draw_plot():
     plt.plot(x1,intercept1 + slope1*(x1),'g')
 
     # Add labels and title
-
+    fig.set_title('Rise in Sea Level')
+    fig.set_xlabel('Year')
+    fig.set_ylabel('Sea Level (inches)')
+    fig=fig.figure
     
     # Save plot and return data for testing (DO NOT MODIFY)
     plt.savefig('sea_level_plot.png')
